@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labaya Studio</title>
+
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- SECTION 1 -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <img src="assets/labayastudio.png" alt="Labaya Studio" class="logo"/>
+
+      <p class="subtitle">
+        CREATIVE EXPERIENCE STUDIO
+      </p>
+
+      <h1>COMING<br>SOON!</h1>
+
+      <div class="line"></div>
+
+      <p class="description">
+        Estamos construyendo una nueva experiencia digital enfocada en creatividad,
+        colaboración y diseño estratégico. Muy pronto podrás descubrir todo lo que
+        Labaya Studio tiene preparado.
+      </p>
+
+      <p class="copyright">
+        © 2026 LABAYA STUDIO
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="contact-section">
+
+    <div class="contact-container">
+
+      <h2>Contacto</h2>
+
+      <form id="contactForm">
+
+        <div class="form-group">
+          <label>First Name:*</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your first name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Work Email:*</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Company Website</label>
+          <input
+            type="text"
+            name="website"
+            placeholder="https://www.website.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Send Message
+        </button>
+
+        <p id="responseMessage"></p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="map-section">
+
+    <h2>Mapa</h2>
+
+    <div class="map-container">
+      <img
+        src="assets/mapalanzamiento.png"
+        alt="Mapa"
+        id="mapImage"
+      />
+    </div>
+
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="mapModal">
+
+    <span class="close-btn" id="closeModal">&times;</span>
+
+    <img
+      class="modal-content"
+      id="modalImg"
+    />
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
