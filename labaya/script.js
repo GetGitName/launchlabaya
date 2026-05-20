@@ -60,3 +60,34 @@ window.onclick = function(event){
   }
 
 }
+
+/* SCROLL REVEAL */
+
+const reveals = document.querySelectorAll(
+  ".reveal, .fade-left, .fade-right, .zoom-in"
+);
+
+function revealOnScroll(){
+
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach((element) => {
+
+    const elementTop =
+      element.getBoundingClientRect().top;
+
+    const revealPoint = 120;
+
+    if(elementTop < windowHeight - revealPoint){
+
+      element.classList.add("active");
+
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
