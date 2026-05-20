@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labaya Studio — Coming Soon</title>
+
+  <style>
+    :root{
+      --bg:#f4f4f4;
+      --text:#000000;
+      --muted:#555555;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, Helvetica, Arial, sans-serif;
+      min-height:100vh;
+      overflow:hidden;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .noise{
+      position:absolute;
+      inset:0;
+      opacity:.03;
+      pointer-events:none;
+      background-image:
+      radial-gradient(circle at 25% 25%, #000 1px, transparent 0),
+      radial-gradient(circle at 75% 75%, #000 1px, transparent 0);
+      background-size:40px 40px;
+    }
+
+    .berry{
+      position:absolute;
+      width:420px;
+      opacity:.05;
+      animation:float 10s ease-in-out infinite;
+      z-index:0;
+    }
+
+    .berry.left{
+      left:-120px;
+      bottom:-120px;
+      transform:rotate(-10deg);
+    }
+
+    .berry.right{
+      right:-140px;
+      top:-120px;
+      transform:rotate(18deg) scale(.85);
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    .container{
+      position:relative;
+      z-index:2;
+      width:min(90%, 900px);
+      text-align:center;
+      padding:40px;
+    }
+
+    .logo{
+      width:min(520px, 90%);
+      margin-bottom:40px;
+    }
+
+    .tag{
+      font-size:.9rem;
+      letter-spacing:.35em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:clamp(3rem, 9vw, 7rem);
+      line-height:.95;
+      font-weight:900;
+      margin-bottom:24px;
+    }
+
+    p{
+      max-width:620px;
+      margin:0 auto 40px auto;
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.7;
+    }
+
+    .divider{
+      width:80px;
+      height:4px;
+      background:#000;
+      margin:0 auto 40px auto;
+      border-radius:999px;
+    }
+
+    .footer{
+      font-size:.85rem;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#777;
+    }
+
+    @media (max-width:768px){
+
+      .berry{
+        width:260px;
+      }
+
+      .container{
+        padding:24px;
+      }
+
+      p{
+        font-size:.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="noise"></div>
+
+  <!-- Fondo decorativo -->
+  <img src="berry.png" alt="Labaya Berry" class="berry left">
+  <img src="berry.png" alt="Labaya Berry" class="berry right">
+
+  <main class="container">
+
+    <!-- Logo principal -->
+    <img src="labayastudio.png" alt="Labaya Studio" class="logo">
+
+    <div class="tag">Creative Experience Studio</div>
+
+    <h1>COMING<br>SOON!</h1>
+
+    <div class="divider"></div>
+
+    <p>
+      Estamos construyendo una nueva experiencia digital enfocada en
+      creatividad, colaboración y diseño estratégico.
+      Muy pronto podrás descubrir todo lo que Labaya Studio tiene preparado.
+    </p>
+
+    <div class="footer">
+      © 2026 LABAYA STUDIO
+    </div>
+
+  </main>
+
+</body>
+</html>
