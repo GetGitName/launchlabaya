@@ -23,11 +23,13 @@
       color:var(--text);
       font-family: Inter, Helvetica, Arial, sans-serif;
       min-height:100vh;
-      overflow:hidden;
+      overflow-x:hidden;
+      overflow-y:auto;
       position:relative;
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       justify-content:center;
+      padding:40px 0;
     }
 
     .noise{
@@ -50,14 +52,14 @@
     }
 
     .berry.left{
-      left:-120px;
-      bottom:-120px;
+      left:-10px;
+      bottom:0px;
       transform:rotate(-10deg);
     }
 
     .berry.right{
       right:-140px;
-      top:-120px;
+      top:-100px;
       transform:rotate(18deg) scale(.85);
       animation-delay:2s;
     }
@@ -115,6 +117,78 @@
       border-radius:999px;
     }
 
+    .form-card{
+      background:#ffffff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:26px;
+      box-shadow:0 30px 60px rgba(0,0,0,.06);
+      padding:32px;
+      max-width:640px;
+      margin:0 auto 40px auto;
+      text-align:left;
+    }
+
+    .form-card h2{
+      margin-bottom:24px;
+      font-size:1.2rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .field{
+      margin-bottom:18px;
+    }
+
+    .field label{
+      display:block;
+      font-size:.9rem;
+      font-weight:700;
+      margin-bottom:8px;
+      color:#111;
+    }
+
+    .field input{
+      width:100%;
+      min-height:54px;
+      padding:12px 16px;
+      border:1px solid #dcdcdc;
+      border-radius:16px;
+      background:#f9f9f9;
+      font-size:1rem;
+      color:#111;
+    }
+
+    .field input:focus{
+      outline:none;
+      border-color:#000;
+      background:#fff;
+    }
+
+    .form-submit{
+      display:flex;
+      justify-content:flex-end;
+      margin-top:8px;
+    }
+
+    .form-submit button{
+      border:none;
+      background:#000;
+      color:#fff;
+      padding:16px 32px;
+      border-radius:999px;
+      font-size:1rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+      transition:transform .2s ease, background .2s ease;
+    }
+
+    .form-submit button:hover{
+      background:#111;
+      transform:translateY(-1px);
+    }
+
     .footer{
       font-size:.85rem;
       letter-spacing:.18em;
@@ -144,8 +218,9 @@
   <div class="noise"></div>
 
   <!-- Fondo decorativo -->
-  <img src="berry.png" alt="Labaya Berry" class="berry left">
-  <img src="berry.png" alt="Labaya Berry" class="berry right">
+  <img src="labayastudio.png" alt="Labaya Berry" class="berry left">
+  <img src="labayastudio.png" alt="Labaya Berry" class="berry right">
+  
 
   <main class="container">
 
@@ -157,7 +232,7 @@
     <p>
       •The fruit of our passion•
 Great brands are more that famous names. They're ideas worth rallying around.
-    </p>
+    </p>    
 
     <h1>COMING<br>SOON!</h1>
 
@@ -172,8 +247,32 @@ Great brands are more that famous names. They're ideas worth rallying around.
     <div class="footer">
       © 2026 LABAYA STUDIO
     </div>
-
+    <p></p>
+<section>
+    <div class="form-card">
+      <h2>Stay in touch</h2>
+      <form action="mailto:hello@labaya.studio" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="firstName">First Name*</label>
+          <input id="firstName" name="First Name" type="text" placeholder="Your first name" required>
+        </div>
+        <div class="field">
+          <label for="workEmail">Work Email*</label>
+          <input id="workEmail" name="Work Email" type="email" placeholder="example@domain.com" required>
+        </div>
+        <div class="field">
+          <label for="companyWebsite">Company Website</label>
+          <input id="companyWebsite" name="Company Website" type="url" placeholder="https://www.website.com">
+        </div>
+        <div class="form-submit">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
   </main>
+
+  
 
 </body>
 </html>
