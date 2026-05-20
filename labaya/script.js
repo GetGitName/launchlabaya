@@ -31,35 +31,6 @@ form.addEventListener("submit", async (e) => {
 
 });
 
-// MODAL MAP
-
-const modal = document.getElementById("mapModal");
-const mapImage = document.getElementById("mapImage");
-const modalImg = document.getElementById("modalImg");
-const closeModal = document.getElementById("closeModal");
-
-mapImage.onclick = function(){
-
-  modal.style.display = "block";
-  modalImg.src = this.src;
-
-}
-
-closeModal.onclick = function(){
-
-  modal.style.display = "none";
-
-}
-
-window.onclick = function(event){
-
-  if(event.target == modal){
-
-    modal.style.display = "none";
-
-  }
-
-}
 
 /* SCROLL REVEAL */
 
